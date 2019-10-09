@@ -1,0 +1,249 @@
+/*--this project is by hmimssa--*/
+@font-face {
+  font-family:'CODE-Bold';
+  src:url(CODE-Bold.otf);
+}
+@font-face{
+  font-family:'CODE-Light';
+  src:url(CODE-Light.otf);
+}
+@font-face{
+  font-family:'sofia';
+  src:url(Sofia-Regular.otf);
+}
+body {
+  margin: 0;
+  min-width: 1000px;
+  height: 100vh;
+  background:#d52331;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255,0,0,0.4); 
+}
+
+*{
+	font-family:CODE-Light;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+@font-face {
+  font-family: "FontAwesome";
+  src: url('fontawesome-webfont.eot');
+  src: url('fontawesome-webfont.eot?#iefix') format('eot'), 
+  url('fontawesome-webfont.ttf') format('truetype'), 
+  url('fontawesome-webfont.svg#FontAwesome') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*--------------index---------------------------------------------*/
+#index{
+  width: 100%;
+  position: relative;
+
+}
+#background img{
+  width: 100%;
+  z-index: 0;
+  position: absolute;
+}
+#stafindex {
+  padding: 60px;
+  position: relative;
+  width: 50%;
+  color: white;
+  z-index: 1;
+  -webkit-animation-name: stafindex; 
+  -webkit-animation-duration: .6s; 
+  -moz-animation-duration: .6s; 
+  animation-name: stafindex;
+  animation-duration: .6s;
+}
+@-webkit-keyframes stafindex {
+    0%   { left: 360px;}
+    80% { left: 0px;}
+    90%{left: 10px;}
+    100% { left:0px;}
+}
+@-moz-keyframes stafindex {
+    0%   { left: 360px;}
+    80% { left: 0px;}
+    90%{left: 10px;}
+    100% { left:0px;}
+}
+@keyframes stafindex {
+    0%   { left: 360px;}
+    80% { left: 0px;}
+    90%{left: 10px;}
+    100% { left:0px;}
+}
+#stafindex>h1{
+  font-size: 60px;
+}
+#stafindex>h1>span{
+  color: black;
+  font-family:'CODE-Bold';
+}
+/*-----form et son staff-----*/
+.cont {       
+  position: relative;
+  width: 500px;
+  margin: auto;
+  -webkit-animation-name: example; 
+  -webkit-animation-duration: .6s; 
+  -moz-animation-duration: .6s; 
+  animation-name: example;
+  animation-duration: .6s;
+  -webkit-transition: transform .2s; /* Safari */
+  transition: transform .2s;
+  transition-timing-function: linear;
+} 
+.cont:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari */
+    transform: scale(1.1); /* Standard syntax */
+}
+@-webkit-keyframes example {
+    0%   { top: 180px;}
+    80% { top:0px;}
+    90% { top:20px;}
+    100% { top:0px;}
+}
+@-moz-keyframes example {
+    0%   { top: 180px;}
+    80% { top:0px;}
+    90% { top:20px;}
+    100% { top:0px;}
+}
+@keyframes example {
+    0%   { top: 180px;}
+    80% { top:0px;}
+    90% { top:20px;}
+    100% { top:0px;}
+}
+            
+.formLogin {
+    padding: 3% 0;
+    border-radius: 30px 30px 0 0;
+    background: rgba(191, 181, 181, 0.44);
+}
+.formLogin >h2 {
+    color: #f45b4b;
+    text-align: center;
+    padding: 4px;
+    letter-spacing: 4px;
+    font-family: CODE-BOLD;
+}
+.formInp >input {   
+  padding: 11px 14px;
+  width: 350px;
+  border-radius: 30px;
+  color: #fff;
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.4);
+  box-shadow: inset 3px 3px 3px black;
+  font-family: 'CODE-BOLD', cursive;
+  font-size: 22px;
+  background-color: rgba(255, 255, 255, 0.53);
+  
+  display: block;
+  margin:auto;
+  margin-bottom: 10px;
+}
+.formInp >input::-webkit-input-placeholder {
+    color: #fff;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.4);
+    font-family: 'CODE-BOLD', cursive;
+}
+
+.formInp >input::-moz-placeholder {
+    color: #fff;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.4);
+    font-family: 'CODE-BOLD', cursive;
+}
+.formInp >input::-ms-input-placeholder {
+    color: #fff;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.4);
+    font-family: 'CODE-BOLD', cursive;
+}
+.formInp >input:hover{
+  background: #d52331;
+}
+.formforget{
+  width: 378px;
+  margin: auto;
+}
+.forgotPasswordAndBottonLogin {
+  float: right;
+}
+.clear{clear: both;}
+.forgotPasswordAndBottonLogin input[type="submit"] {
+    color: #fff;
+    padding: 10px 19px;
+    border-radius: 30px;
+    font-family: CODE-BOLD;
+    cursor: pointer;
+    background: none;
+    border: 2px solid #f45b4b;
+    letter-spacing: 5px;
+  -webkit-transition: transform .2s; /* Safari */
+  transition: transform .2s;
+  transition-timing-function: linear;
+} 
+.forgotPasswordAndBottonLogin input[type="submit"]:hover{
+    -ms-transform: scale(1.05); /* IE 9 */
+    -webkit-transform: scale(1.05); /* Safari */
+    transform: scale(1.05); /* Standard syntax */
+}
+.forgotPasswordAndBottonLogin span a {
+    text-decoration: none;
+    font: 14px CODE-BOLD;
+    color: #f45b4b;
+    letter-spacing: 1px;
+    border-right: 2px solid #f45740;
+    margin-right: 5px;
+    line-height: 24px;
+    display: inline-block;
+    padding-right: 5px;
+}
+.formRogister{
+  background:#e92533;
+  border-radius: 0px 0px 30px 30px;
+  padding:30px 0;
+}
+.register{      
+  width: 380px;
+  margin: auto;
+}
+.register > p {
+    color: #b92032;
+    font: 16px CODE-Light;
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+.register > p >a {
+    font-size: 32px;
+    color: #000;
+    text-decoration: none;
+    font-family: CODE-BOLD;
+    outline: none;
+}
+.clear{clear: both;}
+/*-----------end index-----------------------------------------------*/

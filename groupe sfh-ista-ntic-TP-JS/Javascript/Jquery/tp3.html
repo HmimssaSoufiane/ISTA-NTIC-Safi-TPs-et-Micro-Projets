@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquerycolloction.js"></script>
+	<script language="javascript">
+		$(document).ready(function(){
+			$('input').click(function(){
+				if($('input').val()==="cacher")
+				{
+					$('img').hide();
+	                $('input').val('montrer');
+
+				}
+				else{
+					$('img').show();
+	                $('input').val('cacher');
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<p><input type="button" value="cacher"/></p>
+	<p><img src="d.jpg"> </p>
+</body>
+</html>

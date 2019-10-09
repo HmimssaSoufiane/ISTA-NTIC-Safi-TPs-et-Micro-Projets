@@ -1,0 +1,111 @@
+
+/* ==== Scroll down to find where to put your styles :) ==== */
+
+/*  HTML5 ✰ Boilerplate  */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body, select, input, textarea {  color: #444; }
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+a, a:active, a:visited { color: #607890; }
+a:hover { color: #036; }
+
+html, body {
+    width:100%;
+    height:100%;
+    background:#e3e9f2 url(../images/bgpattern.png);
+}
+
+#wrapper {
+    width:100%;
+    height:100%;
+}
+
+#container {
+    width:300px;
+    height:100%;
+    margin:0 auto;
+    position:relative;
+}
+
+#main {
+    position:absolute;
+    top:50%;
+    margin-top:-2px;
+}
+
+/*-----------------------
+RANGE CSS
+------------------------*/
+
+input[type=range] {
+    -webkit-appearance:none;
+    width:300px;
+    height:5px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e1e2e9), color-stop(100%,#D9DAE4));
+    background: -webkit-linear-gradient(top, #e1e2e9 0%,#D9DAE4 100%); 
+    border-radius:4px;
+    box-shadow:inset 0 1px 0 rgba(0,0,0,0.14), 0 1px 0 rgba(255,255,255,1);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance:none;
+    width:25px;
+    height:25px;
+    border-radius:25px;
+    background:url(../images/range-icon.png) no-repeat;
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>div colors change</title>
+	<script language="javascript">
+			function color (){
+
+				document.getElementById('container').style.backgroundColor=document.getElementById('_9').value;;
+				
+			}
+	</script>
+</head>
+<body>
+<div id="container" style="width:100px;height:100px; background-color:black;"></div>
+<select id="_9"  onchange="color()">
+			<option value="red">Red</option>
+			<option value="blue">Blue</option>
+			<option value="pink">Pink</option>
+			<option value="yellow">Yellow</option>
+</select>
+</body>
+</html>

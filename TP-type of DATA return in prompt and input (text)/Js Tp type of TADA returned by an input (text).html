@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+	<script type="text/javascript">
+		function typeOfData(){
+			var X= document.getElementById('i4').value ;
+				alert(typeof X);
+				alert(X+5);
+				document.getElementById('i4').value=document.getElementById('i5').value+5;
+		}		
+	</script>
+</head>
+<body>
+
+	<input type="text" id="i4" /><br>
+	<input type="text" id="i5"  /><br>
+	<input type="button" onclick="typeOfData()" value="typeof">
+
+</body>
+</html>

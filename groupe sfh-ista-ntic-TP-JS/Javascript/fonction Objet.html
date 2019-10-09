@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ex</title>
+	<script language="javascript">
+	function persone ( firstname, lastname){
+		this.firstname=firstname;
+		this.lastname=lastname;
+		this.affichage=affiche;
+	}	
+	function affiche(){
+		document.write("le nom est : "+ this.firstname+"le prenom est : "+this.lastname);
+	}
+	
+	var p2=new persone("samah","salma");
+	document.write("le  persone est :" +p2.lastname);
+
+	var p3=new persone("samah","salma");
+	p3.affiche();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

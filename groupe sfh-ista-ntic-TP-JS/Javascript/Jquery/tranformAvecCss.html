@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>transform</title>
+</head>
+<style type="text/css">
+	img{
+		margin-top: 60px;
+		margin-left: 40px;
+		width: 200px;
+		animation: f 4s ease-in infinite;
+
+	}
+	@keyframes f{
+		30%{
+			transform: skew(15deg,15deg);
+		}
+		60%{
+			transform: skew(-25deg,-25deg);
+		}
+		100%{
+			margin-top: 700px;
+		}
+	}
+	/*.xy15{
+		transform: skew(15deg,15deg);
+		transition: 1s;
+	}
+	.xy-25{
+		transform: skew(-25deg,-25deg);
+		transition: 1s;
+	}*/
+
+</style>
+<body>
+<img src="capture.png"/>
+<img src="capture.png" class="xy15"/>
+<img src="capture.png" class="xy-25" />
+
+</body>
+</html>

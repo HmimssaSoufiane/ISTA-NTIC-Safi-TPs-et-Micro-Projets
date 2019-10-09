@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exemple</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<div>
+	<p id="id1">un peu de texte<a>et un lien</a>et<strong>une portien en exemplaire</strong>
+	</p>
+</div>
+	<script language="javascript">
+		var elt=document.getElementById('id1');
+		
+		var para=elt.parentNode.nodeName;
+		document.write("<br>parent name :"+para);
+		
+		var par=elt.parentNode.nodeType;
+		document.write("<br>parent type :"+par);
+		
+		var pa=elt.parentNode;
+		document.write("<br>parent Node :"+pa);
+		
+		document.write('<br> element name :'+elt.nodeName);
+		document.write("<br>element type :"+elt.nodeType);
+		
+		var first=elt.firstChild;
+		var last=elt.lastChild;
+		document.write('<br>----------------------------------------------------------------<br> first element  name :'+first.nodeName+'<br>');
+		document.write('<br> first element type :'+first.nodeType+'<br>');
+		document.write('<br> last element name :'+last.nodeName+'<br>');
+		document.write('<br> last element type :'+last.nodeType+'<br>');
+
+		for(var i=0;i<elt.childNodes.length;i++){
+			document.write('<br>'+elt.childNodes[i].nodeName+"  "+elt.childNodes[i].nodevalue);
+		}
+		var next=first.nextSibling;
+		document.write('<br>'+next.nodeName.toLowerCase());
+		document.write('<br>'+next.lastChild.nodeName.toLowerCase());
+		document.write('<br>'+next.firstChild.nodeValue.toLowerCase());
+		var prec=last.previousSibling;
+		document.write('<br>'+prec.nodeName.toLowerCase());
+		document.write('<br>'+prec.firstChild.nodevalue);
+		document.write('<br>'+prec.firstChild.nodeName.toLowerCase());
+		document.write('<br>'+prec.firstChild.nodevalue);
+
+
+	</script>
+</body>
+</html>

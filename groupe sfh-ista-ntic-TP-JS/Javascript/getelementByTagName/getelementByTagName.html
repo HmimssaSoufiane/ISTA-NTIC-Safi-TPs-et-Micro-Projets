@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tagName</title>
+	<script language="javascript">
+		function coleur1(){
+			var bad=document.getElementsByTagName('body');
+				bad[0].className="c1";
+		}
+		function coleur2(){
+			 var bad=document.getElementsByTagName('body')
+			    bad[0].className="c2";//notwork
+		}
+		function coleur3(){
+			var bad=document.getElementsByTagName('body');
+				bad[0].className="c3";
+		}	
+	</script>
+	<style type="text/css">
+		.c1{background: white;color: black;}
+		.c2{background: red;color: green;}
+		.c3{background: yellow;color: gray;}
+		a{
+			margin-right: 50px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Choisir la coleur </h1>
+	<a href="#" onclick="coleur1()">white/black</a>
+	<a href="#" onclick="coleur2()">red/green</a>
+	<a href="#" onclick="coleur3()">yellow/gray</a>
+</body>
+</html>

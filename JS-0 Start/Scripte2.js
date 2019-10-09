@@ -1,0 +1,1 @@
+document.write("<p>Hello from scripte2 External file.</p>");

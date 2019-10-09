@@ -1,0 +1,240 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title></title>
+    </head>
+    
+    <script>
+    
+        function Load()
+        {
+            var jours="";
+            
+            for(i=1;i<=31;i++)
+                jours+="<option value='"+i+"' >"+i+"</option>";
+            document.getElementById("jours").innerHTML=jours;
+            
+            var mois="";
+            
+            for(i=1;i<=12;i++)
+                mois+="<option value='"+i+"' >"+i+"</option>";
+            document.getElementById("mois").innerHTML=mois;
+            var annees="";
+            
+            for(i=1900;i<=2100;i++)
+                annees+="<option value='"+i+"' >"+i+"</option>";
+            document.getElementById("annees").innerHTML=annees;
+        }
+        
+        function VNom()
+        {
+            if(document.getElementById("Nom").value=="")
+            {
+                document.getElementById("ErrNom").innerHTML="Champ obligatoire.";
+                return false;
+            }
+            else
+            {
+                var re = /^[A-Za-z]+[A-Za-z ]*$/;
+                if(re.test(document.getElementById("Nom").value))
+                    document.getElementById("ErrNom").innerHTML="";
+                else
+                {
+                    document.getElementById("ErrNom").innerHTML="Nom invalide.";
+                    return false;
+                }
+            }
+            return true;
+        }
+        function VPrenom()
+        {
+            if(document.getElementById("Prenom").value=="")
+            {
+                document.getElementById("ErrPrenom").innerHTML="Champ obligatoire.";
+                return false;
+            }
+            else
+            {
+                var re = /^[A-Za-z]+[A-Za-z ]*$/;
+                if(re.test(document.getElementById("Prenom").value))
+                    document.getElementById("ErrPrenom").innerHTML="";
+                else
+                {
+                    document.getElementById("ErrPrenom").innerHTML="Prenom invalide.";
+                    return false;
+                }
+            }
+            return true;
+        }
+        
+        function VEmail()
+        {
+            if(document.getElementById("Email").value=="")
+            {
+                document.getElementById("ErrEmail").innerHTML="Champ obligatoire.";
+                return false;
+            }
+            else
+            {
+                var re = /^[A-Za-z_]+[A-Za-z0-9_\.]*@[A-Za-z_]+[A-Za-z0-9_\.]*\.[A-Za-z]{2,4}$/;
+                if(re.test(document.getElementById("Email").value))
+                    document.getElementById("ErrEmail").innerHTML="";
+                else
+                {
+                    document.getElementById("ErrEmail").innerHTML="Email invalide.";
+                    return false;
+                }
+            }
+            return true;
+        }
+        
+        function VDN()
+        {
+            var j=parseInt(document.getElementById("jours").value);
+            var m=parseInt(document.getElementById("mois").value);
+            
+            if(m==2 && j>29)
+            {
+                document.getElementById("ErrDateNaissance").innerHTML="Date Naissance invalide.";
+                return false;
+            }
+            else
+            if(m <8 && m%2==0 && j>30)
+            {
+                document.getElementById("ErrDateNaissance").innerHTML="Date Naissance invalide.";
+                return false;
+            }
+            else
+            if(m >8 && m%2!=0 && j>30)
+            {
+                document.getElementById("ErrDateNaissance").innerHTML="Date Naissance invalide.";
+                return false;
+            }
+            else
+                document.getElementById("ErrDateNaissance").innerHTML="";
+            return true;
+            
+        }
+        
+        function Valider()
+        {
+            if(!VNom())
+            {
+                document.getElementById("Nom").focus();
+                alert('erreur : Nom invalide.');     
+                return false;
+            }
+            if(!VPrenom())
+            {
+                document.getElementById("Prenom").focus();
+                alert('erreur : Prenom invalide.');     
+                return false;
+            }
+            
+            if(!VEmail())
+            {
+                document.getElementById("Email").focus();
+                alert('erreur : Email invalide.');     
+                return false;
+            }
+            
+            if(!VDN())
+            {
+                document.getElementById("jours").focus();
+                alert('erreur : Date de naissance invalide.');     
+                return false;
+            }
+            var date=new Date();
+            
+            var j,m,a;
+            
+            a=date.getFullYear()-document.getElementById("annees").value;
+            m=date.getMonth()-document.getElementById("mois").value;
+            if(m<0)
+            {
+                a--;
+                m=12+m;
+            }
+            j=date.getDate()-document.getElementById("jours").value;
+            if(j<0)
+            {
+                m--;
+                j=30+j;
+            }
+            
+            var Res="<p>nom Complet : "+ document.getElementById("Nom").value+" "+ document.getElementById("Prenom").value+"</p>";
+            Res+="<p>Email : "+ document.getElementById("Email").value+"</p>";
+            Res+="<p>Age : "+ j +" jours et "+ m + " mois et "+ a + "annees";
+            
+            document.getElementById("Resultat").innerHTML=Res;
+            
+        }
+        
+        function Annuler()
+        {
+            document.getElementById("Nom").value="";
+            document.getElementById("Prenom").value="";
+            document.getElementById("Email").value=""
+            
+            
+            document.getElementById("M").checked=true;
+            
+            document.getElementById("jours").value="1";
+            
+            document.getElementById("mois").value="1";
+            
+            document.getElementById("annees").value="1990";
+            
+        }
+        
+    </script>
+    
+    <body onload="Load();">
+        
+        <table width="50%" align="center">
+            <tr>
+                <td><label for="Nom">Nom</label></td>
+                <td><input type="text" name="Nom" id="Nom" oninput="VNom();"></td>
+                <td id="ErrNom"></td>
+            </tr>
+            <tr>
+                <td><label for="">Prenom</label></td>
+                <td><input type="text" name="Prenom" id="Prenom" oninput="VPrenom();"></td>
+                <td id="ErrPrenom"></td>
+            </tr>
+            <tr>
+                <td><label for="">Email</label></td>
+                <td><input type="text" name="Email" id="Email" oninput="VEmail();"></td>
+                <td  id="ErrEmail"></td>
+            </tr>
+            <tr>
+                <td><label for="">Sexe</label></td>
+                <td>
+                    <input type="radio" value="M" checked name="Sexe" id="M"/><label for="M">Homme</label>
+                    <input type="radio" value="F" name="Sexe" id="F"/><label for="F">Femme</label>
+                </td>
+                <td  id="ErrSexe"></td>
+            </tr>
+            <tr>
+                <td><label for="">Date Naissance</label></td>
+                <td>
+                    <select id="jours" onchange="VDN();"></select>
+                    <select id="mois" onchange="VDN();"></select>
+                    <select id="annees"></select>
+                </td>
+                <td  id="ErrDateNaissance"></td>
+            </tr>
+            <tr style="text-align:center;">
+                <td colspan="3">
+                    <input type="button" value="Valider" onclick="Valider();"/>
+                    <input type="button" value="Annuler" onclick="Annuler()"/>
+                </td>
+            </tr>
+        </table>
+        
+        <div id="Resultat">
+            
+        </div>
+        
+    </body>
+</html>

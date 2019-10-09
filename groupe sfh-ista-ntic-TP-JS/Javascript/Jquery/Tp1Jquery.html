@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquerycolloction.js"></script>
+	<script language="javascript">
+		$(document).ready(function(){
+			$("#menu a").mouseover(function(){
+				$(this).addClass('vert');
+			});
+			$("#menu a").mouseout(function(){
+				$(this).removeClass('vert');
+			});
+		});
+	</script>
+	<style type="text/css">
+		.vert{color: green;}
+		
+	</style>
+
+</head>
+<body>
+	<div id="menu">
+		<a href="#">element</a>
+		<a href="#">element</a>
+		<a href="#">element</a>
+	</div>
+</body>
+</html>

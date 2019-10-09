@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquerycolloction.js"></script>
+	<script language="javascript">
+		$(document).ready(function(){
+		$('a').click(function(){
+			if($('p').hasClass('blue')==true)
+			{
+				$('p').addClass('rouge');
+                $('p').removeClass('blue');
+
+			}
+			else{
+				$('p').addClass('blue');
+                $('p').removeClass('rouge');
+
+			}
+		});
+		});	
+		</script>
+		<style type="text/css">
+		.rouge{color:red;
+               text-decoration: underline;
+               font-style: italic;
+                }
+        .blue{color:blue;
+               text-decoration: overline;
+               font-style: normal;
+                }
+		
+	</style>
+	</head>
+	<body>
+		<p class="blue">bla bla bla </p>
+		<a href="#">change le style</a>
+
+
+	</body>
+	</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>valide email</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+	    var regex=/^\w+@(hotmail|yahoo|gmail)\.com$/i;
+		function test_email(){
+			if(regex.test(document.getElementById('RE').value))
+			{
+				document.getElementById('Drop').innerHTML="true";
+			}else
+			{
+				document.getElementById('Drop').innerHTML="false";
+			}
+		}
+		var regex2=/^(0?[1-9]|[12][0-9]|3[01])([\/\-])(0?[1-9]|1[012])\2\d{4}$/;
+		function test_date(){
+			if(regex2.test(document.getElementById('RE2').value))
+			{
+				document.getElementById('Drop').innerHTML="true";
+			}else
+			{
+				document.getElementById('Drop').innerHTML="false";
+			}
+		}
+	</script>
+	<style type="text/css"></style>
+</head>
+<body>
+	email: <input type="text" id="RE" name="email"><br>
+	<input type="button" onclick="test_email()" name="" value="test email"/><br>
+	
+	date (jj/mm/aaaa): <input type="text" id="RE2" name="date"><br>
+	<input type="button" onclick="test_date()" name="" value="test date">
+	
+	<div id="Drop"></div>
+</body>
+</html>

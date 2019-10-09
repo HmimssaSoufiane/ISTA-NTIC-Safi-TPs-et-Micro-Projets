@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    
+    <script>
+    
+        function CmbChange(color)
+        {
+            
+            
+            var v=document.getElementById("Branche").value;
+            var FSD=document.getElementById("FSD");
+            var FSR=document.getElementById("FSR");
+            
+            if(v=="D")
+            {
+                document.getElementById("RD").checked=true;
+                FSD.style.display="block";
+                FSR.style.display="none";
+                if(color)
+                    FSD.style.background=color;
+                else
+                    FSD.style.background="white";
+            }
+            else
+            {
+                document.getElementById("RR").checked=true;
+                FSD.style.display="none";
+                FSR.style.display="block";
+                
+                if(color)
+                    FSR.style.background=color;
+                else
+                    FSR.style.background="white";
+            }
+                
+        }
+        
+        function Radio()
+        {
+            if(document.getElementById("RD").checked)
+            {
+                document.getElementById("Branche").value="D";        
+            }
+            else
+            {
+                document.getElementById("Branche").value="R"; 
+            }
+            CmbChange("yellow");
+        }
+    
+    </script>
+    
+    <body>
+        
+        <label>Branche</label>
+        <select id="Branche" onchange="CmbChange();">
+            <option value="D">Dev</option>
+            <option value="R">Reseau</option>
+        </select>
+        
+        <div>
+            <input type="radio" value="D" name="RBranche" id="RD" checked onchange="Radio()"/> <label for="RD">Dev</label>
+            <input type="radio" value="R" name="RBranche" id="RR"  onchange="Radio()"/> <label for="RR">Reaseau</label> 
+        </div>
+        
+        <fieldset title="Dev" id="FSD">
+           <legend>Dev</legend>
+            <table>
+                <tr>
+                    <td><label for="">Classe</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Niveau</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Specialité</label></td>
+                    <td>
+                        <select>
+                            <option>Web</option>
+                            <option>Desktop</option>
+                            <option>Tous</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset style="display:none;" id="FSR">
+           <legend>Reseau</legend>
+            <table>
+                <tr>
+                    <td><label for="">Classe</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Niveau</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Specialité</label></td>
+                    <td>
+                        <select>
+                            <option>Simple</option>
+                            <option>Complexe</option>
+                            <option>Tous</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        
+    </body>
+</html>

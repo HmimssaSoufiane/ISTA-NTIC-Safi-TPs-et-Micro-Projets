@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+<title>url</title>
+<meta charset="utf-8">
+<script type="text/javascript">
+	function VUrl(){
+		var regex =/^http[s]{0,1}\/\/www\.\w+\.\w{2,5}$/;
+		
+			if(regex.test(document.getElementById('RE').value))
+			{
+				//alert("bien");
+				document.getElementById('Drop').innerHTML="true";
+			}
+			else{
+				//alert("mal");
+				document.getElementById('Drop').innerHTML="false";
+			}
+	}
+</script>
+</head>
+<body>
+	<form>
+		<input type="text" id="RE" ><br/>
+		<input type="button" value="confrmer" onclick="VUrl()">
+		<div id="Drop"></div>
+	</form>
+</body>
+</html>

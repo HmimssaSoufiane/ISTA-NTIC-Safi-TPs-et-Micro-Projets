@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exemple</title>
+	<meta charset="utf-8">
+		<script language="javascript">
+		function calcule(){
+			var a , c='';
+			for (var i = 0 ; i < document.generale.Loisir.length; i++) {
+								if(document.generale.Loisir[i].checked) 
+								c+=document.generale.Loisir[i].value+" ";
+				}
+			  a=document.generale.nom.value+"  "+
+				document.generale.prenom.value+"  "+
+				document.generale.sexe.value+" , age   "+
+				document.generale.age.value+"  ans Elle est  "+
+				document.generale.na.value+"  pays : "+"  Loisire :  "+c;
+				document.getElementById('id1').innerHTML=a;
+		}
+		function hide() {
+			document.getElementById('pays').style.display='none';
+		}
+	</script>
+	<style type="text/css">
+		
+	</style>
+
+</head>
+<body>
+<h1>Inscription</h1> 
+<form name="generale">
+	<table>
+		<tr><td>Nom :    </td><td><input type="text" name="nom"/>    </td></tr>
+	    <tr><td>Prenom : </td><td><input type="text" name="prenom"/> </td></tr>
+        <tr><td>Age  :   </td><td><input type="text" name="age"/>    </td></tr>
+		<tr><td>Sexe :   </td><td>Homme
+								 <input type="radio" value="Homme" name="sexe" /> 
+		                         Femme
+		                         <input type="radio" value="Femme" name="sexe"/>
+		                      </td>
+		</tr>
+	</table>
+	<p>Nationalité :
+			Marocaine<input type="radio" value="Marocaine"  name="na" onclick="hide()"/> 
+			Etrangére <input type="radio" value="Etrangére" name="na" onclick="document.getElementById('pays').style.display='inline-block'"/>
+	</p>
+	<p> 
+		Pays :
+		<select id="pays">
+			<option value="France">France</option>
+			<option value="maroc">maroc</option>
+			<option value="USA">USA</option>
+		</select>
+	</p>
+	<p>Loisir :
+		<br><input type="checkbox" name="Loisir" value="lecture"/>Lecture 
+		<br><input type="checkbox" name="Loisir" value="cinema"/>Cinema
+		<br><input type="checkbox" name="Loisir" value="sport"/>Sport
+		<br><input type="checkbox" name="Loisir" value="theatre"/>theatre
+		<br><input type="checkbox" name="Loisir" value="Voyage"/>Voyage
+		<br><input type="checkbox" name="Loisir" value="Science"/>Science
+	</p>
+	<input type="button" name="calculer" value="calculer" onclick="calcule()"/>
+</form>
+<div id="id1"></div>
+</body>
+</html>

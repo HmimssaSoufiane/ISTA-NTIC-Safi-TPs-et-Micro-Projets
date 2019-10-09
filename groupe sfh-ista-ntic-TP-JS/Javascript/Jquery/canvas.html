@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>canvas</title>
+</head>
+<body>
+<canvas id="zone" width="200px" height="200px" style="border:1px solid black"></canvas>
+<script language="javascript">
+	var canvas=document.getElementById('zone');
+	var contexte=canvas.getContext("2d");
+	contexte.fillStyle="olive";
+	contexte.fillRect(25,50,150,100);
+	contexte.clearRect(50,75,150,100);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>kilo calories</title>
+	<meta charset="UTF-8"/>
+	<script language="javascript">
+
+		function calculer(){
+			var S=0;
+				if(document.a.a1.checked){S= (document.a.pain.value)*(2.75);   }
+				if(document.a.a2.checked){S+=(document.a.viondes.value)*(1.18);}
+				if(document.a.a3.checked){S+=(document.a.legumes.value)*(0.8); }
+				if(document.a.a4.checked){S+=(document.a.unite1.value)*(116);  }
+				if(document.a.a5.checked){S+=(document.a.unite2.value)*(80);   }
+				if(document.a.a6.checked){S+=(document.a.unite3.value)*(140);  }
+				document.a.total.value=S;
+				
+
+		
+		}
+	</script>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding: 0px;
+		}
+		.form1{
+			margin:100px auto;
+			width: 600px;
+			height: 700px;
+			background:silver;
+			border-radius: 16px;
+
+		}
+		input[type="text"]{
+			width: 200px;
+			height: 40px;
+			border:0px;
+			border-radius: 16px ;
+			background:teal;
+			color: gold;
+			font:20px tahoma;
+			padding-left: 10px;
+		}
+		.div1{
+			padding-top: 60px;
+			padding-left: 40px;
+		}
+		p{
+			padding: 12px 0px;
+		}
+		body{
+			font:20px tahoma;
+		}
+		input[type="button"]{
+			width: 100px;
+			height: 40px;
+			font:20px tahoma;
+			border: 0px;
+			border-radius: 16px;
+
+
+		}
+		span{
+			font:16px tahoma;
+			margin-left: -100px;
+			margin-top: -4px;
+		}
+		.p1{
+			text-decoration: underline;
+
+		}
+	</style>
+</head>
+<body>
+	<form name="a" class="form1">
+		<div class="div1">
+		    <p class="p1">Calculer valeur energétique d'un repas.</p>
+			<p><input type="checkbox" name="a1"/>&nbsp;&nbsp;&nbsp;pain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="pain"/>grammes</p>
+			<p><input type="checkbox" name="a2"/>&nbsp;&nbsp;&nbsp;viondes&nbsp;&nbsp;<input type="text" name="viondes"/>grammes</p>
+			<p><input type="checkbox" name="a3"/>&nbsp;&nbsp;&nbsp;légumes&nbsp;<input type="text" name="legumes"/>grammes</p>
+			<p><input type="checkbox" name="a4"/>&nbsp;&nbsp;&nbsp;bananes&nbsp;<input type="text" name="unite1"/>uinté</p>
+			<p><input type="checkbox" name="a5"/>&nbsp;&nbsp;&nbsp;poommes&nbsp;<input type="text" name="unite2"/>uinté</p>
+			<p><input type="checkbox" name="a6"/>&nbsp;&nbsp;&nbsp;yaourt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="unite3"/>uinté</p>
+			<p><input type="button" onclick="calculer()" value="Calculer"></p>
+			<p>La valeur de votre repas est: <input type="text" name="total"/><span>Kilo Calories<span></p> 
+		</div>
+
+	</form>
+</body>
+</html>

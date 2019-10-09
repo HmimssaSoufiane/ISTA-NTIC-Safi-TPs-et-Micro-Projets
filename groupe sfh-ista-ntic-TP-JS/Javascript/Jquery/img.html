@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script type="text/javascript" src="jquerycolloction.js"></script>
+<script language="javascript">
+	$(document).ready(function(){
+		$('.menu img').click(function(){
+			$('.apercu').hide();
+			var c=$(this).attr("src");
+			$('.apercu').html('<img src="'+c+'" width="500px" height="500px" />').show("slow");
+		});
+	});
+</script>
+</head>
+	<body>
+	<div class="menu">
+	<img src="d.jpg" height="100px" width="300px">
+	<img src="capture.png" height="100px" width="300px">
+	</div>
+	<div class="apercu"></div>
+	</body>
+</html>
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+	<script type="text/javascript">
+		function test()
+		{
+			var Xtype=(document.getElementById('test').value)-(2);//it work just for multiplication and - and /,another oberration we need to convert
+
+			    document.getElementById('test2').innerHTML =typeof(Xtype) + " "+(Xtype+1);
+		}
+	</script>
+</head>
+<body>
+	<input type="text" name="" id="test">
+	<input type="button" value="typeof" name="" onclick="test()">
+	<div id="test2">
+		
+	</div>
+</body>
+</html>

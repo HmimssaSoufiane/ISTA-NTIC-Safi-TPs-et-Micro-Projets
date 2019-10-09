@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TP DOM</title>
+</head>
+<body>
+<p id="truc" onclick="change_enfants()">
+	Un texte avec plein d'enfants, <b>en gras</b>, <i>en italique</i>... et une image 
+	<img alt="Un dauphin" src="d.jpg"/></p>
+<p>
+	<a href="# ">Retour au cours</a>
+</p>
+	<script language="javascript">
+	    var elt;
+		var a='teeeeest';
+		function changer() {
+			 elt=document.getElementById('truc');
+		}
+		changer();
+		document.write('<br> enfants de paragraphes :'+elt.childNodes.length);
+		elt.firstChild.nodeValue=a;
+		elt.lastChild.width="5";
+		elt.lastChild.height="154";
+		
+		document.write('<br>lastChild est '+elt.lastChild.nodeName);
+
+		elt.childNodes[1].innerHTML="<font color='blue'>en gras<"+"/font>";
+		elt.childNodes[3].style.display="block";
+		
+	</script>
+</body>
+</html>

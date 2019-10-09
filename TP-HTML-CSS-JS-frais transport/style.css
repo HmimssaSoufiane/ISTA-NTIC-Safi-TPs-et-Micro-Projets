@@ -1,0 +1,129 @@
+@font-face {
+			 		font-family:'CODE-Bold';
+			 		src:url(CODE-Bold.otf);
+
+
+ 		}
+ 		@font-face{
+ 					font-family:'Dearjoe';
+			 		src:url(DEARJ5ALT.otf);
+ 		}
+		body{
+			background: #313536;
+			color: #f45b4b;
+			margin: 0px;
+			padding: 0px;
+		}
+		.grandpa{
+			margin:30px auto;
+			width: 440px;
+			padding: 0px;
+		}
+		.father{
+			background:#e1e1e1;
+			border-radius: 0px 0px 16px 16px;
+			border:0px;
+			font:20px tahoma;
+		}
+		input{
+			outline: none;
+		}
+		input[type="text"]{
+			margin-top: 5px;
+		    border: 0px;
+		    padding: 11px 14px;
+		    width: 350px;
+		    border-radius: 30px;
+		    font: 22px tahoma;
+		    background: #cacaca;
+		    box-shadow: inset 0px 0px 10px rgba(244, 91, 75, 0.7);
+		}		
+		input[type="button"], input[type="reset"] {
+		    border: 0px;
+		    background: #f45b4b;
+		    color: #f45b4b;
+		    padding: 8px 67px;
+		    font: 13px tahoma;
+		    font-weight: bold;
+		}
+		input[type="button"]{
+			border-radius:0px 30px 30px 0px;border-left: 1px solid white;
+			 background: -webkit-linear-gradient(left, white ,#f45b4b); /* For Safari 5.1 to 6.0 */
+			 background: -o-linear-gradient(left, white, #f45b4b); /* For Opera 11.1 to 12.0 */
+			 background: -moz-linear-gradient(left,white, #f45b4b); /* For Firefox 3.6 to 15 */
+			 background: linear-gradient(to left, white , #f45b4b); /* Standard syntax */
+		}
+		input[type="reset"]{
+			 border-radius: 30px 0px 0px 30px;border-right: 1px solid white;
+			 background: -webkit-linear-gradient(right, white ,#f45b4b); /* For Safari 5.1 to 6.0 */
+			 background: -o-linear-gradient(right, white, #f45b4b); /* For Opera 11.1 to 12.0 */
+			 background: -moz-linear-gradient(right,white, #f45b4b); /* For Firefox 3.6 to 15 */
+			 background: linear-gradient(to right, white , #f45b4b); /* Standard syntax */
+		}
+		input[type="radio"]{
+			width: 10px;
+			height: 10px;
+		}
+		#erreurColis, #erreurDis, #erreurDis2, #erreur {
+		    font: 12px tahoma;
+		    margin-left: 49px;
+		    margin-top: -19px;
+		    color: #313536;
+		}
+		._89 {
+			font: 18px CODE-Bold;
+		}
+		._88{font: 16px CODE-Bold;}
+		._100 {
+		    position: absolute;
+		    margin-left: -44px;
+		    margin-top: 20px;
+		    color: #a9a9ac;
+		    font-size: 13px;
+		}
+
+		._876 {
+		    border: 8px outset #a03b31;
+		    display: inline-block;
+		    border-radius: 30px;
+		}
+		input[type="button"]:hover {
+			  background:#f45b4b; 
+			  color: white;
+		}
+		input[type="reset"]:hover {
+			  background:#f45b4b; 
+			  color: white;
+		}
+		.copyright{font: 10px tahoma;color: #313536; height: 20px;}
+		form > p{ text-align: center; }
+		.Pspicial{
+		    text-align: left;
+		    padding-left: 30px;
+		}
+		.imgRoute {
+		    text-align: center;
+		    padding-top: 20px;
+		}
+		.imgRoute > img{
+			 height: 100px;
+   			 width: 100px;
+		}
+		header >h1 {
+		    font-family: "CODE-Bold" , tahoma;
+		    font-size: 40px;
+		    margin: 0;
+		    margin-top: 27px;
+		    line-height: 30px;
+		}
+		header {
+		    height: 84px;
+		    background: #f45b4b;
+		    color: black;
+		    border-radius: 16px 16px 0px 0px;
+		    padding-top: 1px;
+		}
+		header>span {
+		    font: 13px Dearjoe;
+		    margin-left: 277px;
+		}

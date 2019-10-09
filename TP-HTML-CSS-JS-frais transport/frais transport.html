@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HMAIMSSA</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<script type="text/javascript" src="myscripts.js"></script>
+	<link rel="icon" type="image/png" href="icones/Caracas_Sur.png"/>
+</head>
+<body>
+
+
+<div class="grandpa">
+	<header>
+		<h1 align="center">Calcul de frais</h1>
+		<span>Transport de colis<span>
+	</header>
+	<div class="father">
+		<div class="imgRoute"><img src="icones/64.png"/></div>
+		<form name="F">
+			<p><input type="text" name="N" placeholder="Numero de colis" autofocus="" /></p>
+			<div id="erreurColis"></div>
+			<p class="Pspicial"><span class="_89">Mode de trasport :</span>
+								&nbsp;&nbsp;<input type="radio" name="R"><span class="_89 _88">Express</span>
+								&nbsp;&nbsp;<input type="radio" name="R"><span class="_89 _88">Normal</span>
+			</p>	
+			<div id="erreur"></div>					  
+			<p><input type="text" name="N" placeholder="Distance"/><span class="_89 _100">Km</span></p>
+			<div id="erreurDis"></div>
+			<p><input type="text" name="N" placeholder="Poids"/><span class="_89 _100">Kg</span></p>
+			<div id="erreurDis2"></div>
+			<p><input type="text" name="T" placeholder="Cort Total"/></p>
+			<p><span class="_876"><input type="reset" name="efface" value="effacer"/>
+			<input type="button" name="calculer" value="calculer" onclick="test()"/></span></p>
+			<div class="copyright" align="center">HMAIMSSA © 2016</div>
+		</form>
+	</div>
+</div>
+
+</body>
+</html>

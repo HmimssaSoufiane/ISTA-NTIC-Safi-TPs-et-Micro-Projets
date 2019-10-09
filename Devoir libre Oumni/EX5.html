@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EX5 by hmimssa</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+			body{background:#313536;font: 14px tahoma;outline: none;}
+ 			.cont {
+							    width: 500px;
+							    margin: auto;
+							    /* margin-top: 100px; */
+							    padding-top: 100px;}							
+			.formLogin{        
+											background: #e1e1e1;
+							    padding: 10px 8px;
+							    /* margin-top: 100px; */
+							    border-radius: 30px ;
+							    /* padding-top: 90px; */}
+			.formLogin >h2{    
+										 color: #f45b4b;
+							    text-align: center;
+							    padding: 4px;
+							    /* margin-top: 100px; */
+							    /* padding-top: 90px; */
+							    font: 30px tahoma;}
+			.formInp{text-align: center;}
+			.formInp >input {   
+											border: 0px;
+							    padding: 11px 14px;
+							    width: 350px;
+							    border-radius: 30px;
+							    font: 22px tahoma;
+							    background: #cacaca;
+							    outline: none;
+							}
+							.formInp >input[type="button"]{background-color: #f45b4b;color: white;margin-bottom: 5px;cursor: pointer;}
+							.formInp >input[type="button"]:hover{background-color: #ff1000;}
+			
+	</style>
+	<script type="text/javascript">
+		function enregistrer() {
+			var cleX=document.getElementById('L').value;
+			var valeurX=document.getElementById('PasswordM').value;
+			localStorage.setItem(cleX,valeurX);
+		}
+
+		function afficherM() {
+			document.getElementById('PasswordM').type="text";
+		}
+		function function_name3() {
+			// body...
+			var cleXX=document.getElementById('L').value;
+			if(localStorage.getItem(cleXX))
+			{
+				 document.getElementById('cont').style.display='none';
+				 document.getElementById('body').style.backgroundColor="white";
+				 document.getElementById('test2').innerHTML="Bienvenue Mr "+localStorage.getItem(cleXX) ;
+			}
+			else{document.getElementById('test').innerHTML="login non trouver";}
+		}
+ 		
+	</script>
+
+</head>
+<body id="body">
+<div class="cont" id="cont">
+	<div class="formLogin">
+	    <h2> LOGIN FORM</h2>	   
+	    <div class="formInp">
+	     	<input type="text" id="L" placeholder="Login" autofocus="" required=""><br><br>
+		    <input type="Password" id="PasswordM" placeholder="Password" required=""><br><br>	
+		    <input type="button" name="" value="enregistrer" onclick="enregistrer()">
+		    <input type="button" name="" value="saisir" 	 onclick="afficherM()">
+		    <input type="button" name="" value="afficher" 	 onclick="function_name3()">
+		    <div id="test"></div>
+	   </div>		   
+	</div>
+</div>
+<div id="test2" ></div>
+</body>
+</html>

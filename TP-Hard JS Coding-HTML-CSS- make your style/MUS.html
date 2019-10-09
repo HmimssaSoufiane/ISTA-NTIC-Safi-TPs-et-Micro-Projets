@@ -1,0 +1,128 @@
+<!--by hmimssa-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>make your style</title>
+	<link rel="stylesheet" type="text/css" href="CSS.css"/>
+	<link rel="icon" type="image/png" href="H.png"/>
+	<script language="javascript">
+ 		function update() {
+			document.getElementById("P1").style.backgroundColor="rgb("+document.getElementById("cfond1").value +","+document.getElementById("cfond2").value +","+ document.getElementById("cfond3").value +")";
+				document.getElementById('scfond1').innerHTML=document.getElementById("cfond1").value+"|255";
+				document.getElementById('scfond2').innerHTML=document.getElementById("cfond2").value+"|255";
+				document.getElementById('scfond3').innerHTML=document.getElementById("cfond3").value+"|255";
+
+
+				// document.getElementById("P1").style.color="rgb("+document.getElementById("cfont1").value +","+document.getElementById("cfont2").value +","+ document.getElementById("cfont3").value +")";
+				// 	document.getElementById('scfont1').innerHTML=document.getElementById("cfont1").value+"|255";
+				// 	document.getElementById('scfont2').innerHTML=document.getElementById("cfont2").value+"|255";
+				// 	document.getElementById('scfont3').innerHTML=document.getElementById("cfont3").value+"|255";
+
+				document.getElementById("P1").style.fontSize=document.getElementById("fontz").value +"px";
+					document.getElementById('sf').innerHTML=document.getElementById("fontz").value+"|100px";
+
+				document.getElementById("P1").style.padding=document.getElementById("padding").value +"px";
+					document.getElementById('sp').innerHTML=document.getElementById("padding").value+"|100px";
+
+				document.getElementById("P1").style.height=document.getElementById("height").value +"px";
+					document.getElementById('sh').innerHTML=document.getElementById("height").value+"|300px";
+
+				document.getElementById("P1").style.width=document.getElementById("width").value +"px";
+					document.getElementById('sw').innerHTML=document.getElementById("width").value+"|300px";
+
+				document.getElementById("P1").style.borderRadius=document.getElementById("arrondi").value +"px";
+					document.getElementById('sa').innerHTML=document.getElementById("arrondi").value+"|30px";
+				document.getElementById("P1").style.transform="rotate("+document.getElementById("rotation").value +"deg)";
+					document.getElementById('sr').innerHTML=document.getElementById("rotation").value+"|180deg";
+ 		}
+ 		function changetoIMG2(){
+ 			document.getElementById('dialimg').innerHTML="<img onmouseout='changetoIMG1()'src='Untitled-2.png'>";
+ 		}
+ 		function changetoIMG1(){
+ 			document.getElementById('dialimg').innerHTML="<img onmouseover='changetoIMG2()' src='Untitled-1.png'>";
+ 		}
+ 		function bigImg(x) {
+		    x.style.width = "18%";
+		}
+
+		function normalImg(x) {
+		    x.style.width = "6%";
+		}
+	</script>
+</head>
+<body onload="update()">
+	<div class="D1">
+		<header>
+			<img src="CSS3.png" width="6%" onmouseover="bigImg(this)" onmouseout="normalImg(this)" />
+			<span class="makeyourstyle">make your style</span> 
+		</header>
+		<table cellspacing="0px">
+			<tr>
+				<td>
+					<h2>Couleur de fond </h2>
+				</td>
+				<td>
+				 <p>
+				 			<span>0</span><input type="range" id="cfond1" min="0" max="255" value="255" step="1" oninput="update()" onchange="update()"/><span id="scfond1"></span> 
+				 		<br><span>0</span><input type="range" id="cfond2" min="0" max="255" value="255" step="1" oninput="update()" onchange="update()"/><span id="scfond2"></span> 
+				 		<br><span>0</span><input type="range" id="cfond3" min="0" max="255" value="255" step="1" oninput="update()" onchange="update()"/><span id="scfond3"></span> 
+				 </p>				
+				</td>
+			</tr>
+<!-- 			<tr>
+				<td>
+					<h2>Couleur de text</h2>
+				</td>
+				<td>
+				 <p>
+				 			<span>0</span><input type="range" id="cfont1" min="0" max="255" value="0" step="1" oninput="update()" onchange="update()"/><span id="scfont1"></span> 
+				 		<br><span>0</span><input type="range" id="cfont2" min="0" max="255" value="0" step="1" oninput="update()" onchange="update()"/><span id="scfont2"></span> 
+				 		<br><span>0</span><input type="range" id="cfont3" min="0" max="255" value="0" step="1" oninput="update()" onchange="update()"/><span id="scfont3"></span> 
+				 </p>				
+				</td>
+			</tr> -->
+			<tr>
+				<td>
+					<h2>font-size</h2>
+				</td>
+				<td>
+				 <p><span>0</span><input type="range" id="fontz" min="0" value="16" max="100" step="1" oninput="update()" onchange="update()" /><span id="sf"></span></p>					
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h2>padding</h2>
+				</td>
+				<td>
+				 <p><span>0</span><input type="range" id="padding" min="0" value="0" max="30" step="1" oninput="update()" onchange="update()"/><span id="sp"></span></p>					
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h2>height</h2>
+					<h2>width</h2>
+				</td>		
+				<td>
+				 <p><span>0</span><input type="range" id="height" min="0" value="16" max="300" step="1" oninput="update()" onchange="update()"/><span id="sh"></span></p>
+				 <p><span>0</span><input type="range" id="width" min="0" value="112.25" max="300" step="1" oninput="update()" onchange="update()"/><span id="sw"></span></p>		
+				</td>	
+			</tr>
+			<tr>
+				<td>
+					<h2>arrondi</h2>
+					<h2>rotation</h2>				
+				</td>
+				<td>
+				 <p><span>0</span><input type="range" id="arrondi" min="0" value="0" max="30" step="1" oninput="update()" onchange="update()"/><span id="sa"></span></p>
+				 <p><span>0</span><input type="range" id="rotation" min="0" value="0" max="180" step="1" oninput="update()" onchange="update()"/><span id="sr"></span></p>				
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="D2">
+		<p id="P1"> titre de texte</p>
+	</div>
+	<div class="clear"></div>
+	<div id="dialimg" ><img onmouseover="changetoIMG2()" src="Untitled-1.png"></div>
+</body>
+</html>
